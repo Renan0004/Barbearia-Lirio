@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen bg-[#0a0a0a] overflow-hidden">
+    <section id="inicio" className="relative min-h-screen bg-[#0a0a0a] overflow-hidden">
       {/* Efeito de gradiente animado */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-[#1a1a1a] to-black" />
@@ -67,7 +67,7 @@ export default function Hero() {
                 className="flex flex-col sm:flex-row gap-4 mb-8"
               >
                 <Link 
-                  href="https://wa.me/5541987203046" 
+                  href="https://wa.me/5541987203046?text=Olá%2C%20gostaria%20de%20agendar%20um%20horário%20na%20Lírio%20Barbearia." 
                   target="_blank"
                   className="bg-[#d4af37] hover:bg-[#c09b30] text-black px-8 py-4 rounded-xl font-semibold text-xl flex items-center justify-center gap-3 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 group"
                 >
@@ -76,7 +76,7 @@ export default function Hero() {
                 </Link>
                 
                 <Link 
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/liriocabelereiro_barbearia/"
                   target="_blank"
                   className="bg-gradient-to-r from-black/40 to-black/60 hover:from-black/60 hover:to-black/80 border-2 border-[#d4af37] text-[#d4af37] px-8 py-4 rounded-xl font-semibold text-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-3 group"
                 >

@@ -33,8 +33,8 @@ const stats = [
 ];
 
 // Componente para animar números
-function AnimatedCounter({ value, label, icon: Icon }) {
-  const ref = useRef(null);
+function AnimatedCounter({ value, label, icon: Icon }: { value: string, label: string, icon: React.ElementType }) {
+  const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref);
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, { duration: 2000 });
@@ -114,6 +114,7 @@ export default function About() {
               src="/gallery/images/lirio.png"
               alt="Lírio - Proprietário da Barbearia"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
             />
           </motion.div>
@@ -176,7 +177,7 @@ export default function About() {
               className="pt-6"
             >
               <a
-                href="https://wa.me/5541987203046"
+                href="https://wa.me/5541987203046?text=Olá%2C%20gostaria%20de%20agendar%20um%20horário%20na%20Lírio%20Barbearia."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary inline-flex items-center gap-2"

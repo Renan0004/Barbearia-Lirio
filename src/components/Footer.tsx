@@ -1,19 +1,30 @@
 "use client";
 
 import Link from 'next/link';
-import { FaWhatsapp, FaInstagram, FaMapMarkerAlt, FaClock, FaPhone } from 'react-icons/fa';
+import { FaWhatsapp, FaInstagram, FaMapMarkerAlt, FaClock, FaPhone, FaFacebookF } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const socialLinks = [
   {
-    href: 'https://wa.me/5541987203046',
+    href: 'https://wa.me/5541987203046?text=Olá%2C%20gostaria%20de%20agendar%20um%20horário%20na%20Lírio%20Barbearia.',
     icon: FaWhatsapp,
     label: 'WhatsApp',
+    target: '_blank',
+    rel: 'noopener noreferrer',
   },
   {
     href: 'https://www.instagram.com/liriocabelereiro_barbearia/',
     icon: FaInstagram,
     label: 'Instagram',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  },
+  {
+    href: 'https://www.facebook.com/lirio.cabelereiro',
+    icon: FaFacebookF,
+    label: 'Facebook',
+    target: '_blank',
+    rel: 'noopener noreferrer',
   },
 ];
 

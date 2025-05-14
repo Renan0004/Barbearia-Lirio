@@ -1,6 +1,6 @@
 "use client";
 
-import { FaMapMarkerAlt, FaClock, FaPhone, FaWhatsapp, FaInstagram } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaClock, FaPhone, FaWhatsapp, FaInstagram, FaFacebookF } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const contactInfo = [
@@ -27,12 +27,23 @@ const socialLinks = [
   {
     icon: FaWhatsapp,
     label: 'WhatsApp',
-    href: 'https://wa.me/5541987203046',
+    href: 'https://wa.me/5541987203046?text=Olá%2C%20gostaria%20de%20agendar%20um%20horário%20na%20Lírio%20Barbearia.',   
+    target: '_blank',
+    rel: 'noopener noreferrer',
   },
   {
     icon: FaInstagram,
     label: 'Instagram',
     href: 'https://www.instagram.com/liriocabelereiro_barbearia/',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  },
+  {
+    icon: FaFacebookF,
+    label: 'Facebook',
+    href: 'https://www.facebook.com/lirio.cabelereiro',
+    target: '_blank',
+    rel: 'noopener noreferrer',
   },
 ];
 
@@ -108,8 +119,8 @@ export default function Contact() {
                 <a
                   key={index}
                   href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={social.target}
+                  rel={social.rel}
                   className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-black transition-all duration-300 hover:scale-105"
                 >
                   <social.icon className="text-2xl" />

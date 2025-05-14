@@ -79,7 +79,7 @@ const Services: React.FC = () => {
           className="text-center mt-16"
         >
           <a
-            href="#contact"
+            href="#contato"
             className="inline-flex items-center px-8 py-3 bg-primary text-black font-semibold rounded-full hover:bg-primary/90 transition-colors duration-300"
           >
             Agendar Horário →

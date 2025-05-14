@@ -1,7 +1,12 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { metadata } from './metadata';
-import ClientLayout from "@/components/ClientLayout";
+import dynamic from 'next/dynamic';
+
+// Importação dinâmica do ClientLayout para garantir que seja renderizado apenas no cliente
+const ClientLayout = dynamic(() => import("@/components/ClientLayout"), {
+  ssr: false,
+});
 
 const poppins = Poppins({
   subsets: ["latin"],

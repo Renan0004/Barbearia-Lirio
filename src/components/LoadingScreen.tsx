@@ -2,13 +2,20 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function LoadingScreen({ onLoadingComplete }: { onLoadingComplete: () => void }) {
+  const [isReady, setIsReady] = useState(false);
+
   useEffect(() => {
+    // Garante que a animação só começa depois que o componente é montado
+    setIsReady(true);
+    
     const timer = setTimeout(onLoadingComplete, 2800);
     return () => clearTimeout(timer);
   }, [onLoadingComplete]);
+
+  if (!isReady) return null;
 
   return (
     <motion.div
@@ -36,6 +43,7 @@ export default function LoadingScreen({ onLoadingComplete }: { onLoadingComplete
             src="/gallery/images/LogoBarbearia.png"
             alt="Lírio Barbearia"
             fill
+            sizes="160px"
             className="object-contain"
             priority
           />

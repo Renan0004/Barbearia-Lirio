@@ -155,6 +155,7 @@ export default function Gallery() {
                   src={selectedImage}
                   alt="Imagem ampliada"
                   fill
+                  sizes="(max-width: 768px) 100vw, 80vw"
                   className="object-contain"
                 />
               </motion.div>
